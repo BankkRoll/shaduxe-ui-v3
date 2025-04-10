@@ -1,0 +1,127 @@
+---
+title: Input
+description: Displays a form input field or a component that looks like an input field.
+author: shadcn
+published: true
+---
+
+## Installation
+
+<Callout>
+
+**Note:** We have the exact same installation process as [shadcn/ui](https://ui.shadcn.com/docs/installation/).
+
+</Callout>
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://v3.shaduxe.com/r/input"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step title="Copy the Code">
+    Copy and paste the following code snippet into your project:
+</Step>
+
+<ComponentSource name="input" />
+
+<Step>Make sure the import path is correct and matches your project setup:</Step>
+
+```tsx {1,6} showLineNumbers
+import { Input } from "@/components/ui/input";
+
+export default function Home() {
+  return (
+    <div className="flex items-center justify-center h-screen">
+      <Input type="email" placeholder="Email" />
+    </div>
+  );
+}
+```
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { Input } from "@/components/ui/input"
+```
+
+```tsx
+<Input />
+```
+
+## Examples
+
+### Default Input
+
+<ComponentPreview name="input-default-example" />
+
+### Underline Input
+
+<ComponentPreview name="input-underline-example" />
+
+### Pill Input
+
+<ComponentPreview name="input-pill-example" />
+
+### Input Default with Icon
+
+<ComponentPreview name="input-default-icon-example" />
+
+### Input Underline with Icon
+
+<ComponentPreview name="input-underline-icon-example" />
+
+### Input Pill with Icon
+
+<ComponentPreview name="input-pill-icon-example" />
+
+### Input Pill Password with Icon
+
+<ComponentPreview name="input-pill-icon-password-example" />
+
+## Props
+
+| Prop          | Type                                    | Description                                | Default   |
+|---------------|-----------------------------------------|--------------------------------------------|-----------|
+| variant       | `default` \| `underline` \| `pill`    | Style variant of the input                  | `default` |
+| inputSize     | `xs` \| `sm` \| `md` \| `lg` \| `xl` | Size of the input                           | `md`      |
+| type          | `text` \| `email` \| `password` \| etc. | Type of the input field                     | `text`    |
+| className     | `string`                                | Additional CSS classes                     | -         |
+| Icon          | `React.ElementType`                     | Icon component to be displayed             | -         |
+| iconPlacement | `"left"` \| `"right"`                   | Placement of the icon                       | `"left"`  |
+
+### Supported HTML Attributes
+
+Because the Button uses Radix UI, it inherits and supports **all standard HTML input attributes**, including:
+
+- `placeholder`
+- `disabled`
+- `required`
+- `readOnly`
+- `value`
+- `onChange`
+- `onFocus`
+- `onBlur`
+- `aria-*` attributes
+- `data-*` attributes
+
+The Input component uses Radix UI's primitives, ensuring proper accessibility, keyboard navigation and semantic HTML.

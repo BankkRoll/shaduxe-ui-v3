@@ -1,0 +1,126 @@
+---
+title: Tabs
+description: A set of layered sections of content—known as tab panels—that are displayed one at a time.
+author: shadcn
+published: true
+---
+
+## Installation
+
+<Callout>
+
+**Note:** We have the exact same installation process as [shadcn/ui](https://ui.shadcn.com/docs/installation/).
+
+</Callout>
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://v3.shaduxe.com/r/tabs"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step title="Copy the Code">
+    Copy and paste the following code snippet into your project:
+</Step>
+
+<ComponentSource name="tabs" />
+
+<Step>Make sure the import path is correct and matches your project setup:</Step>
+
+```tsx
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
+
+export default function Home() {
+  return (
+    <Tabs defaultValue="account" className="w-[400px]">
+      <TabsList>
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password">Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="account">Make changes to your account here.</TabsContent>
+      <TabsContent value="password">Change your password here.</TabsContent>
+    </Tabs>
+  )
+}
+```
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+```
+
+```tsx
+<Tabs defaultValue="account" className="w-[400px]">
+  <TabsList>
+    <TabsTrigger value="account">Account</TabsTrigger>
+    <TabsTrigger value="password">Password</TabsTrigger>
+  </TabsList>
+  <TabsContent value="account">Make changes to your account here.</TabsContent>
+  <TabsContent value="password">Change your password here.</TabsContent>
+</Tabs>
+```
+
+## Examples
+
+### Default Tabs
+
+<ComponentPreview name="tabs-default-example" />
+
+### Underline Tabs
+
+<ComponentPreview name="tabs-underline-example" />
+
+### Pill Tabs
+
+<ComponentPreview name="tabs-pill-example" />
+
+### Rounded Tabs
+
+<ComponentPreview name="tabs-rounded-example" />
+
+### Folder Tabs
+
+<ComponentPreview name="tabs-folder-example" />
+
+## Props
+
+| Prop     | Type                                                     | Description                           | Default   |
+|----------|----------------------------------------------------------|---------------------------------------|-----------|
+| variant  | `default` \| `underline` \| `pill` \| `rounded` \| `folder` | Style variant of the tabs             | `default` |
+| className| `string`                                                 | Additional CSS classes                | -         |
+
+### Supported HTML Attributes
+
+Because the Tabs use Radix UI's `Tabs` component, they inherit and support **all standard HTML attributes**, including:
+
+- `defaultValue`
+- `value`
+- `onValueChange`
+- `orientation`
+- `dir`
+- `activationMode`
+- `aria-*` attributes
+- `data-*` attributes
+- Event handlers like `onKeyDown`, `onFocus`, etc.
+
+The Tabs component uses Radix UI's primitives, ensuring proper accessibility, keyboard navigation and semantic HTML.

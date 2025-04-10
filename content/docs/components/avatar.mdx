@@ -1,0 +1,121 @@
+---
+title: Avatar
+description: Displays a user's profile picture or initials with multiple variants and sizes.
+author: bankk
+published: true
+---
+
+## Installation
+
+<Callout>
+
+**Note:** We have the exact same installation process as [shadcn/ui](https://ui.shadcn.com/docs/installation/).
+
+</Callout>
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add "https://v3.shaduxe.com/r/avatar"
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step title="Copy the Code">
+    Copy and paste the following code snippet into your project:
+</Step>
+
+<ComponentSource name="avatar" />
+
+<Step>Make sure the import path is correct and matches your project setup:</Step>
+
+```tsx {1,5-8} showLineNumbers
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
+export default function Home() {
+  return (
+      <Avatar>
+        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
+  );
+}
+```
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+```
+
+```tsx
+<Avatar>
+  <AvatarImage src="https://github.com/shadcn.png" />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar>
+```
+
+## Examples
+
+### Default Avatar
+
+<ComponentPreview name="avatar-circle-example" />
+
+### Rounded Avatar
+
+<ComponentPreview name="avatar-rounded-example" />
+
+### Square Avatar
+
+<ComponentPreview name="avatar-square-example" />
+
+### Avatar with Fallback
+
+When an image fails to load or is not provided, the `AvatarFallback` component is displayed.
+
+<ComponentPreview name="avatar-fallback-example" />
+
+### Avatar Group
+
+Combine multiple avatars to create a group display.
+
+<ComponentPreview name="avatar-group-example" />
+
+## Props
+
+| Prop     | Type                | Description                                | Default   |
+|----------|---------------------|--------------------------------------------|-----------| 
+| variant  | `circle` \| `square` \| `rounded` | Shape of the avatar | `circle`  |
+| size     | `xs` \| `sm` \| `md` \| `lg` \| `xl` \| `2xl` | Size of the avatar | `md` |
+| className| `string`            | Additional CSS classes                     | -         |
+
+### Supported HTML Attributes
+
+Because the Button uses Radix UI, it inherits and supports **all standard HTML image attributes**, including:
+
+- `src`
+- `alt`
+- `width`
+- `height`
+- `aria-*` attributes
+- `data-*` attributes
+- Event handlers like `onError`, `onLoad`, etc.
+
+The Avatar component uses Radix UI's primitives, ensuring proper accessibility, keyboard navigation and semantic HTML.
