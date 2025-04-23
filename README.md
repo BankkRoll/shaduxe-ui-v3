@@ -4,7 +4,7 @@
 
 **shaduxe/ui v3** is a built off [shadcn/ui](https://ui.shadcn.com), and now built with **Tailwind v3** to deliver advanced and beautifully designed components. With shaduxe/ui, you can install, customize, and deploy accessible and reusable components effortlessly.
 
-> Looking for Tailwind v4 version? Check out [shaduxe-ui repository](https://github.com/BankkRoll/shaduxe-ui) or visit [shaduxe.com](https://ui.shaduxe.com/)
+> Looking for Tailwind v4 version? It can be found at [shaduxe.com](https://ui.shaduxe.com/).
 
 ---
 
